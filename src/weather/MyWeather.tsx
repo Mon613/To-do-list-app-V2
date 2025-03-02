@@ -27,7 +27,7 @@ export const MyWeather = () => {
 
             console.log(now);
             setWeather({
-                temperature: api.data.hourly.temperature_2m[now],
+                temperature: api.data.hourly.temperature_2m[now-1],
                 humidity: api.data.hourly.relative_humidity_2m[0],
                 windSpeed: api.data.hourly.wind_speed_10m[0],
                 maxTemperature: api.data.daily.temperature_2m_max[0],
