@@ -1,0 +1,24 @@
+.myWeather{
+    height: 180px;
+    width: 375px;
+    border-radius: 20px;
+    background: linear-gradient(to left, #4a90e2, #6a11cb);
+    color: white;
+    padding: 12px;
+}
+.location{
+    display: flex;
+    align-items: center;
+}
+.temperature{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+.weatherDetail{
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    margin-bottom:5px;
+}

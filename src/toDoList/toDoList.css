@@ -1,0 +1,62 @@
+.taskInput {
+    text-align: center;
+    margin-top: 65px;
+    display: block;
+
+}
+
+.content {
+    text-align: center;
+}
+
+input {
+    width: 55%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.customBtn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 12px;
+    margin-left: 13px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #00A9FF;
+    border: none;
+    border-radius: 10px;
+}
+
+.taskList {
+    width: 58%;
+    margin: 0 auto;
+}
+
+.content {
+    margin-top: 45px;
+}
+
+.taskItem {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Đường kẻ ngăn cách */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskItem:last-child {
+    border-bottom: none;
+    /* Bỏ đường kẻ ở task cuối cùng */
+}
+
+span {
+    flex: 1;
+    /*phần text chiếm hết khoảng trống*/
+
+}
