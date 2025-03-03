@@ -11,7 +11,7 @@ export const MyWeather = () => {
     const location = UserLocation();
     const [weather, setWeather] = useState<WeatherMe | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
-    const [locationUser, setLocation] = useState<string>("Đang tải...");
+    const [locationUser, setLocation] = useState<string>("Loading...");
 
     useEffect(() => {
         if (location.latitude && location.longitude) {

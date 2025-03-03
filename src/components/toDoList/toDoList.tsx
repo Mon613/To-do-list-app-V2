@@ -27,14 +27,14 @@ const TodoListApp = () => {
                         <span
                             className={task.completed ? "completed" : ""}
 
-                            style={{ textDecoration: task.completed ? "line-through" : "none", color: task.completed ? "gray" : "black" }}
+                            style={{ textDecoration: task.completed ? "line-through" : "none", color: task.completed ? "gray" : "black" ,display: "flex"}}
                         >
                             {task.text}</span>
                     )}
 
-                <i onClick={() => deleteTask(task.id)} className="bi bi-trash icon" style={{ color: "red" }}></i>
-                <i onClick={() => editTask(task.id, task.text)} className="bi bi-pencil-square icon" style={{ color: "#FFB800" }} />
-                <i onClick={() => statusTask(task.id)} className="bi bi-check2-circle icon" style={{ color: "#05FF00" }} />
+                <i onClick={() => deleteTask(task.id)} className="bi bi-trash icon" style={{ color: "red" }} role="button"></i>
+                <i onClick={() => editTask(task.id, task.text)} className="bi bi-pencil-square icon" style={{ color: "#FFB800" }} role="button"/>
+                <i onClick={() => statusTask(task.id)} className="bi bi-check2-circle icon" style={{ color: "#05FF00" }} role="button"/>
 
             </li>
         )
