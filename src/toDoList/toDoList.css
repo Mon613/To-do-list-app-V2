@@ -1,3 +1,10 @@
+
+.text {
+    background: linear-gradient(to right,#07FDFD 20%, #5756FF, #CC00FF);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
 .taskInput {
     text-align: center;
     margin-top: 65px;
@@ -13,28 +20,41 @@ input {
     width: 55%;
     padding: 12px 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px 0 0 10px;
     box-sizing: border-box;
 }
 
 .customBtn {
     display: inline-block;
-    padding: 15px 35px;
-    font-size: 12px;
-    margin-left: 13px;
-    cursor: pointer;
+    padding: 12px 35px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #00A9FF;
+    background: linear-gradient(to right,#07FDFD, #5756FF, #CC00FF);
     border: none;
-    border-radius: 10px;
+    border-radius:0 10px 10px 0;
+    padding-top: 9px;
+    font-weight: bold;
 }
-
+.taskStatus{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 200px 10px;
+    
+}
+.taskStatusItem{
+    height: 38px;
+    width: 50%;
+    border: 1px solid #D9D9D99D;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
 .taskList {
-    width: 58%;
-    margin: 0 auto;
+    width: 67%;
+    margin: 32px 0 31px 169px;
 }
 
 .content {
@@ -43,20 +63,19 @@ input {
 
 .taskItem {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    /* Đường kẻ ngăn cách */
+    border: 1px solid #D9D9D99D;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
+}
+.icon{
+    margin-left: 20px;
 }
 
-.taskItem:last-child {
-    border-bottom: none;
-    /* Bỏ đường kẻ ở task cuối cùng */
-}
 
 span {
     flex: 1;
-    /*phần text chiếm hết khoảng trống*/
 
 }

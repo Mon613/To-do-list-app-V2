@@ -52,9 +52,11 @@ const TodoListApp = () => {
             )
         )
     }
+    const completedTask = tasks.filter(task => task.completed).length;
+    const progressTask = tasks.length - completedTask;
     const renderTask = (task: Task) => {
         return (
-            <li key="task.id" className="taskItem">
+            <li key={task.id} className="taskItem">
                 {
                     editingId === task.id ? (
                         <input type="text" value={editingText}
@@ -65,27 +67,34 @@ const TodoListApp = () => {
                     ) : (
                         <span
                             className={task.completed ? "completed" : ""}
-                            onClick={() => editTask(task.id, task.text)}
-                            style={{ textDecoration: task.completed ? "line-through" : "none" }}
+                            
+                            style={{ textDecoration: task.completed ? "line-through" : "none", color:task.completed ? "gray":"black"}}
                         >
                             {task.text}</span>
                     )}
-                <button className="customBtn" onClick={() => statusTask(task.id)}>{task.completed ? "Undo" : "Done"}</button>
-                <button className="customBtn" onClick={() => deleteTask(task.id)}><i className="bi bi-trash"></i></button>
+                
+                <i onClick={() => deleteTask(task.id)} className="bi bi-trash icon" style={{color:"red"}}></i>
+                <i onClick={() => editTask(task.id, task.text)} className="bi bi-pencil-square icon"  style={{color:"#FFB800"}}/>
+                <i onClick={() => statusTask(task.id)} className="bi bi-check2-circle icon" style={{color:"#05FF00"}}/>
 
             </li>
         )
     }
     return (
         <>
-            <div>
-                <h1>Tasks Management</h1>
+            <div >
+                <h1 className="text">MY TO DO LIST</h1>
             </div>
+            
             <div className="taskInput">
-                <input type="text" id="taskName" value={newTask} onChange={(e) => setNewTask(e.target.value)} onKeyDown={(e) => e.key === "Enter" && addTask()} placeholder="Thêm tác vụ..." />
-                <button className="customBtn" onClick={addTask} >Add</button>
+                <input type="text" id="taskName" value={newTask} onChange={(e) => setNewTask(e.target.value)} onKeyDown={(e) => e.key === "Enter" && addTask()} placeholder="New task..." />
+                <button className="customBtn" onClick={addTask} >Save</button>
             </div>
             <div className="content">
+            <div className="taskStatus">
+                <div className="taskStatusItem"><p className="text" >Done: {completedTask}</p></div>
+                <div className="taskStatusItem"><p className="text">In Progress: {progressTask}</p></div>
+            </div>
                 <ul className='taskList'>
                     {tasks.map(renderTask)}
                 </ul>

@@ -9,9 +9,6 @@ import TodoListApp from './toDoList/toDoList'
 import MyWeather from './weather/MyWeather'
 // import WeatherWidget from './weather/blabla'
 function App() {
-  useEffect(() => { 
-    console.log(navigator); 
-}, []); 
   return (
     <div className='row'>
       <div className='tasks col-md-11 col-sm-11'>

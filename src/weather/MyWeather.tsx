@@ -4,6 +4,7 @@ import UserLocation from "./UserLocation";
 import { WeatherMe } from "./WeatherMe";
 import axios from "axios";
 
+
 export const MyWeather = () => {
     const location = UserLocation();
     const [weather, setWeather] = useState<WeatherMe | null>(null);
@@ -27,7 +28,7 @@ export const MyWeather = () => {
 
             console.log(now);
             setWeather({
-                temperature: api.data.hourly.temperature_2m[now-1],
+                temperature:Math.round( api.data.hourly.temperature_2m[now]),
                 humidity: api.data.hourly.relative_humidity_2m[0],
                 windSpeed: api.data.hourly.wind_speed_10m[0],
                 maxTemperature: api.data.daily.temperature_2m_max[0],
@@ -53,7 +54,7 @@ export const MyWeather = () => {
     return (
         <>
             <div className="myWeather">
-                <div className="location"><h2>{locationUser}</h2></div>
+                <div className="location"><h2>{locationUser} </h2><i className="bi bi-send-fill"/></div>
                 <div className="temperature"><h4><i className="bi bi-thermometer-half"/>{weather?.temperature}°C</h4></div>
                 <div className="weatherDetail">
                     <div className="windSpeed">
