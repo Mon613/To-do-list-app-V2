@@ -4,8 +4,8 @@ interface Location {
   latitude: number | null;
   longitude: number | null;
 }
-const DEFAULT_LOCATION: Location={
-  latitude:21.0285,
+const DEFAULT_LOCATION: Location = {
+  latitude: 21.0285,
   longitude: 105.8542,
 }
 const UserLocation = () => {

@@ -1,4 +1,4 @@
-export type WeatherMe = {
+export interface WeatherMe  {
     temperature: number;
     humidity: number;
     windSpeed: number;

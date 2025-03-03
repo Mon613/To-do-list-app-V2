@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import './toDoList/toDoList.css'
+import './components/toDoList/toDoList.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
 import TodoListApp from './components/toDoList/toDoList'

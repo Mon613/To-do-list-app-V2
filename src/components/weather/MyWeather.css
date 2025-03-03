@@ -1,4 +1,4 @@
-.myWeather{
+.myWeather {
     height: 180px;
     width: 375px;
     border-radius: 20px;
@@ -6,19 +6,23 @@
     color: white;
     padding: 12px;
 }
-.location{
+
+.location {
     display: flex;
     align-items: center;
 }
-.temperature{
+
+.temperature {
     display: flex;
     align-items: center;
     margin-left: 60px;
 }
-.weatherDetail{
+
+.weatherDetail {
     display: flex;
     justify-content: space-between;
 }
-p{
-    margin-bottom:5px;
+
+p {
+    margin-bottom: 5px;
 }
