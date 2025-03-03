@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import './MyWeather.css'
-import UserLocation from "./UserLocation";
+import UserLocation from "../location/UserLocation";
 import { WeatherMe } from "./WeatherMe";
 import axios from "axios";
 

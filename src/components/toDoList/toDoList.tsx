@@ -67,15 +67,15 @@ const TodoListApp = () => {
                     ) : (
                         <span
                             className={task.completed ? "completed" : ""}
-                            
-                            style={{ textDecoration: task.completed ? "line-through" : "none", color:task.completed ? "gray":"black"}}
+
+                            style={{ textDecoration: task.completed ? "line-through" : "none", color: task.completed ? "gray" : "black" }}
                         >
                             {task.text}</span>
                     )}
-                
-                <i onClick={() => deleteTask(task.id)} className="bi bi-trash icon" style={{color:"red"}}></i>
-                <i onClick={() => editTask(task.id, task.text)} className="bi bi-pencil-square icon"  style={{color:"#FFB800"}}/>
-                <i onClick={() => statusTask(task.id)} className="bi bi-check2-circle icon" style={{color:"#05FF00"}}/>
+
+                <i onClick={() => deleteTask(task.id)} className="bi bi-trash icon" style={{ color: "red" }}></i>
+                <i onClick={() => editTask(task.id, task.text)} className="bi bi-pencil-square icon" style={{ color: "#FFB800" }} />
+                <i onClick={() => statusTask(task.id)} className="bi bi-check2-circle icon" style={{ color: "#05FF00" }} />
 
             </li>
         )
@@ -85,16 +85,16 @@ const TodoListApp = () => {
             <div >
                 <h1 className="text">MY TO DO LIST</h1>
             </div>
-            
+
             <div className="taskInput">
                 <input type="text" id="taskName" value={newTask} onChange={(e) => setNewTask(e.target.value)} onKeyDown={(e) => e.key === "Enter" && addTask()} placeholder="New task..." />
                 <button className="customBtn" onClick={addTask} >Save</button>
             </div>
             <div className="content">
-            <div className="taskStatus">
-                <div className="taskStatusItem"><p className="text" >Done: {completedTask}</p></div>
-                <div className="taskStatusItem"><p className="text">In Progress: {progressTask}</p></div>
-            </div>
+                <div className="taskStatus">
+                    <div className="taskStatusItem"><p className="text" >Done: {completedTask}</p></div>
+                    <div className="taskStatusItem"><p className="text">In Progress: {progressTask}</p></div>
+                </div>
                 <ul className='taskList'>
                     {tasks.map(renderTask)}
                 </ul>

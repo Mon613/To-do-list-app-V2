@@ -1,11 +1,11 @@
-
 .text {
-    background: linear-gradient(to right,#07FDFD 20%, #5756FF, #CC00FF);
+    background: linear-gradient(to right, #07FDFD 20%, #5756FF, #CC00FF);
     background-clip: text;
     color: transparent;
     font-weight: bold;
-    margin-left:15px
+    margin-left: 15px
 }
+
 .taskInput {
     text-align: center;
     margin-top: 65px;
@@ -33,19 +33,21 @@ input {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background: linear-gradient(to right,#07FDFD, #5756FF, #CC00FF);
+    background: linear-gradient(to right, #07FDFD, #5756FF, #CC00FF);
     border: none;
-    border-radius:0 10px 10px 0;
+    border-radius: 0 10px 10px 0;
     padding-top: 9px;
     font-weight: bold;
 }
-.taskStatus{
+
+.taskStatus {
     display: flex;
     justify-content: space-around;
     margin: 5px 200px 10px;
-    
+
 }
-.taskStatusItem{
+
+.taskStatusItem {
     height: 38px;
     width: 50%;
     border: 1px solid #D9D9D99D;
@@ -53,6 +55,7 @@ input {
     display: flex;
     align-items: center;
 }
+
 .taskList {
     width: 67%;
     margin: 32px 0 31px 169px;
@@ -71,7 +74,8 @@ input {
     justify-content: center;
     margin-bottom: 10px;
 }
-.icon{
+
+.icon {
     margin-left: 20px;
 }
 

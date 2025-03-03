@@ -5,8 +5,8 @@ import './App.css'
 import './toDoList/toDoList.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
-import TodoListApp from './toDoList/toDoList'
-import MyWeather from './weather/MyWeather'
+import TodoListApp from './components/toDoList/toDoList'
+import MyWeather from './components/weather/MyWeather'
 // import WeatherWidget from './weather/blabla'
 function App() {
   return (
